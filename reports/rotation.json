@@ -1,0 +1,2061 @@
+{
+  "input": {
+    "path": "data/records.json",
+    "digest": "76f2e39f2ec1d048",
+    "cycles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "evaluation_cycles": [
+      6,
+      7
+    ],
+    "target_cycle": 8,
+    "capacity_vintage": "proposal"
+  },
+  "validation_notes": [
+    "片区 站0 在记录中只开放过 晚 时段，不存在“同片区换时段”的可比记录。",
+    "片区 站1 在记录中只开放过 周末 时段，不存在“同片区换时段”的可比记录。",
+    "片区 站2 在记录中只开放过 晚 时段，不存在“同片区换时段”的可比记录。",
+    "片区 站3 在记录中只开放过 周末 时段，不存在“同片区换时段”的可比记录。"
+  ],
+  "model": {
+    "fit_cycles": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "specifications": [
+      {
+        "name": "位置-时段",
+        "terms": [
+          "home",
+          "weekend"
+        ],
+        "bic_weight": 0.9394
+      },
+      {
+        "name": "位置-时段-交互",
+        "terms": [
+          "home",
+          "weekend",
+          "home_weekend"
+        ],
+        "bic_weight": 0.0602
+      },
+      {
+        "name": "内容",
+        "terms": [
+          "home",
+          "weekend",
+          "home_weekend",
+          "subject_交流",
+          "subject_协作"
+        ],
+        "bic_weight": 0.0004
+      },
+      {
+        "name": "内容-照看",
+        "terms": [
+          "home",
+          "weekend",
+          "home_weekend",
+          "subject_交流",
+          "subject_协作",
+          "needs_care"
+        ],
+        "bic_weight": 0.0
+      },
+      {
+        "name": "内容-照看-席位",
+        "terms": [
+          "home",
+          "weekend",
+          "home_weekend",
+          "subject_交流",
+          "subject_协作",
+          "needs_care",
+          "seats"
+        ],
+        "bic_weight": 0.0
+      }
+    ],
+    "coefficients": [
+      {
+        "spec": "位置-时段",
+        "term": "home",
+        "weight": 0.939394,
+        "coefficient": 0.884357
+      },
+      {
+        "spec": "位置-时段",
+        "term": "weekend",
+        "weight": 0.939394,
+        "coefficient": 0.224777
+      },
+      {
+        "spec": "位置-时段-交互",
+        "term": "home",
+        "weight": 0.060189,
+        "coefficient": 0.982691
+      },
+      {
+        "spec": "位置-时段-交互",
+        "term": "weekend",
+        "weight": 0.060189,
+        "coefficient": 0.352478
+      },
+      {
+        "spec": "位置-时段-交互",
+        "term": "home_weekend",
+        "weight": 0.060189,
+        "coefficient": -0.259156
+      },
+      {
+        "spec": "内容",
+        "term": "home",
+        "weight": 0.000384,
+        "coefficient": 0.957861
+      },
+      {
+        "spec": "内容",
+        "term": "weekend",
+        "weight": 0.000384,
+        "coefficient": 0.356126
+      },
+      {
+        "spec": "内容",
+        "term": "home_weekend",
+        "weight": 0.000384,
+        "coefficient": -0.228387
+      },
+      {
+        "spec": "内容",
+        "term": "subject_交流",
+        "weight": 0.000384,
+        "coefficient": -0.062198
+      },
+      {
+        "spec": "内容",
+        "term": "subject_协作",
+        "weight": 0.000384,
+        "coefficient": 0.133911
+      },
+      {
+        "spec": "内容-照看",
+        "term": "home",
+        "weight": 3.2e-05,
+        "coefficient": 0.883173
+      },
+      {
+        "spec": "内容-照看",
+        "term": "weekend",
+        "weight": 3.2e-05,
+        "coefficient": 0.284893
+      },
+      {
+        "spec": "内容-照看",
+        "term": "home_weekend",
+        "weight": 3.2e-05,
+        "coefficient": -0.15155
+      },
+      {
+        "spec": "内容-照看",
+        "term": "subject_交流",
+        "weight": 3.2e-05,
+        "coefficient": -0.07458
+      },
+      {
+        "spec": "内容-照看",
+        "term": "subject_协作",
+        "weight": 3.2e-05,
+        "coefficient": 0.118583
+      },
+      {
+        "spec": "内容-照看",
+        "term": "needs_care",
+        "weight": 3.2e-05,
+        "coefficient": 0.300399
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "home",
+        "weight": 2e-06,
+        "coefficient": 0.896565
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "weekend",
+        "weight": 2e-06,
+        "coefficient": 0.300696
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "home_weekend",
+        "weight": 2e-06,
+        "coefficient": -0.163642
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "subject_交流",
+        "weight": 2e-06,
+        "coefficient": -0.068299
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "subject_协作",
+        "weight": 2e-06,
+        "coefficient": 0.122911
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "needs_care",
+        "weight": 2e-06,
+        "coefficient": 0.310116
+      },
+      {
+        "spec": "内容-照看-席位",
+        "term": "seats",
+        "weight": 2e-06,
+        "coefficient": -0.034425
+      }
+    ],
+    "switch_model": {
+      "intercept_n_open_needs_care": [
+        -2.597478,
+        0.676699,
+        -0.341028
+      ],
+      "destination_uniform_test": {
+        "rows": 140,
+        "chi2": 13.998539,
+        "df": 10,
+        "p_value": 0.173058
+      }
+    },
+    "censoring_rule": "selected 为空且未 declined 的行视为候补未揭晓：只贡献“未参与”质量，不当作对任何活动的拒绝；wait_not_invited 不进入选择集，未提供的选项绝不按拒绝处理。",
+    "one_person_rule": "每个家庭每轮只作为一个决策单位：全部活动概率与未参与概率之和为 1。",
+    "switch_rule": "改选目的地按其余可选活动的均匀分布处理；这是对现有记录最保守、也最符合数据的假设（均匀性检验见 destination_uniform_test）。"
+  },
+  "evidence": {
+    "gaps": {
+      "max_cycle": 7,
+      "sites": [
+        "站0",
+        "站1",
+        "站2",
+        "站3"
+      ],
+      "slots": [
+        "周末",
+        "晚"
+      ],
+      "subjects": [
+        "交流",
+        "协作",
+        "陪伴"
+      ],
+      "empty_site_slot_cells": [
+        "站0/周末",
+        "站1/晚",
+        "站2/周末",
+        "站3/晚"
+      ],
+      "thin_content_cells": [],
+      "sparse_populations": [
+        {
+          "area": "站0",
+          "time_preference": "周末",
+          "needs_care": true,
+          "families": 2
+        },
+        {
+          "area": "站0",
+          "time_preference": "平日",
+          "needs_care": true,
+          "families": 2
+        },
+        {
+          "area": "站0",
+          "time_preference": "轮班",
+          "needs_care": false,
+          "families": 3
+        },
+        {
+          "area": "站0",
+          "time_preference": "轮班",
+          "needs_care": true,
+          "families": 4
+        },
+        {
+          "area": "站1",
+          "time_preference": "周末",
+          "needs_care": true,
+          "families": 2
+        },
+        {
+          "area": "站1",
+          "time_preference": "平日",
+          "needs_care": false,
+          "families": 3
+        },
+        {
+          "area": "站1",
+          "time_preference": "平日",
+          "needs_care": true,
+          "families": 4
+        },
+        {
+          "area": "站1",
+          "time_preference": "轮班",
+          "needs_care": false,
+          "families": 4
+        },
+        {
+          "area": "站1",
+          "time_preference": "轮班",
+          "needs_care": true,
+          "families": 3
+        },
+        {
+          "area": "站2",
+          "time_preference": "周末",
+          "needs_care": false,
+          "families": 4
+        },
+        {
+          "area": "站2",
+          "time_preference": "周末",
+          "needs_care": true,
+          "families": 3
+        },
+        {
+          "area": "站2",
+          "time_preference": "平日",
+          "needs_care": false,
+          "families": 4
+        },
+        {
+          "area": "站2",
+          "time_preference": "平日",
+          "needs_care": true,
+          "families": 3
+        },
+        {
+          "area": "站2",
+          "time_preference": "轮班",
+          "needs_care": true,
+          "families": 2
+        },
+        {
+          "area": "站3",
+          "time_preference": "周末",
+          "needs_care": false,
+          "families": 4
+        },
+        {
+          "area": "站3",
+          "time_preference": "周末",
+          "needs_care": true,
+          "families": 3
+        },
+        {
+          "area": "站3",
+          "time_preference": "平日",
+          "needs_care": true,
+          "families": 2
+        },
+        {
+          "area": "站3",
+          "time_preference": "轮班",
+          "needs_care": false,
+          "families": 4
+        },
+        {
+          "area": "站3",
+          "time_preference": "轮班",
+          "needs_care": true,
+          "families": 3
+        }
+      ],
+      "notes": [
+        "每个片区在记录中只出现过一个时段，因此“同一片区换时段”完全没有同片区可比记录。",
+        "时段偏好（time_preference）与照看需求在家庭间固定，但未表现出可估计的选择差异；本分析不据此做人群分层外推。",
+        "需要照看的家庭与不需要照看的家庭在小格中的样本极少（每格 2–5 户），无法支持“某类家庭在某格一定接受”的结论。"
+      ]
+    }
+  },
+  "held_out_validation": {
+    "train_cycles": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "evaluation_cycles": [
+      6,
+      7
+    ],
+    "per_cycle": {
+      "6": {
+        "fit_cycles": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n": 72,
+        "choice": {
+          "log_likelihood_per_row": -2.774579,
+          "brier_outside": 0.058189,
+          "top_choice_accuracy": 0.305556,
+          "total_variation": 0.134523,
+          "observed": {
+            "B5": 0.055556,
+            "B10": 0.083333,
+            "B3": 0.097222,
+            "B8": 0.069444,
+            "B6": 0.097222,
+            "B11": 0.097222,
+            "B0": 0.138889,
+            "B4": 0.055556,
+            "B7": 0.083333,
+            "B9": 0.069444,
+            "NONE": 0.055556,
+            "B2": 0.041667,
+            "B1": 0.055556
+          },
+          "predicted": {
+            "B1": 0.062659,
+            "B3": 0.080984,
+            "B5": 0.066792,
+            "B9": 0.076912,
+            "NONE": 0.111212,
+            "B2": 0.073319,
+            "B6": 0.088196,
+            "B10": 0.069513,
+            "B7": 0.065591,
+            "B11": 0.091558,
+            "B0": 0.077605,
+            "B4": 0.069488,
+            "B8": 0.066169
+          }
+        },
+        "final": {
+          "total_variation": 0.144157,
+          "observed": {
+            "B5": 0.027778,
+            "B2": 0.083333,
+            "B7": 0.097222,
+            "B10": 0.083333,
+            "B9": 0.083333,
+            "B11": 0.083333,
+            "B8": 0.097222,
+            "B1": 0.069444,
+            "B6": 0.097222,
+            "B3": 0.097222,
+            "B4": 0.027778,
+            "B0": 0.097222,
+            "NONE": 0.055556
+          },
+          "predicted": {
+            "B1": 0.059008,
+            "B3": 0.081223,
+            "B5": 0.062799,
+            "B9": 0.075275,
+            "NONE": 0.111212,
+            "B2": 0.078145,
+            "B6": 0.093387,
+            "B10": 0.075003,
+            "B7": 0.062459,
+            "B11": 0.087806,
+            "B0": 0.078937,
+            "B4": 0.068776,
+            "B8": 0.065969
+          },
+          "mass_on_activities": 63.992713
+        },
+        "switch": {
+          "observed_rate": 0.402778,
+          "predicted_rate": 0.437608,
+          "n": 72
+        }
+      },
+      "7": {
+        "fit_cycles": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n": 83,
+        "choice": {
+          "log_likelihood_per_row": -2.819495,
+          "brier_outside": 0.063087,
+          "top_choice_accuracy": 0.39759,
+          "total_variation": 0.119048,
+          "observed": {
+            "B8": 0.084337,
+            "B1": 0.084337,
+            "B2": 0.072289,
+            "B7": 0.084337,
+            "B0": 0.084337,
+            "B9": 0.096386,
+            "B10": 0.048193,
+            "B3": 0.108434,
+            "NONE": 0.060241,
+            "B5": 0.084337,
+            "B4": 0.048193,
+            "B6": 0.084337,
+            "B11": 0.060241
+          },
+          "predicted": {
+            "B0": 0.064793,
+            "B4": 0.065986,
+            "B8": 0.069403,
+            "NONE": 0.116801,
+            "B1": 0.07975,
+            "B2": 0.06791,
+            "B5": 0.068474,
+            "B9": 0.082996,
+            "B6": 0.077712,
+            "B10": 0.080359,
+            "B3": 0.091995,
+            "B7": 0.068224,
+            "B11": 0.065598
+          }
+        },
+        "final": {
+          "total_variation": 0.170352,
+          "observed": {
+            "B8": 0.072289,
+            "B2": 0.036145,
+            "B3": 0.144578,
+            "B9": 0.072289,
+            "B10": 0.096386,
+            "B7": 0.036145,
+            "B0": 0.084337,
+            "B5": 0.084337,
+            "B1": 0.096386,
+            "NONE": 0.060241,
+            "B11": 0.072289,
+            "B4": 0.036145,
+            "B6": 0.108434
+          },
+          "predicted": {
+            "B0": 0.060193,
+            "B4": 0.065645,
+            "B8": 0.069235,
+            "NONE": 0.116801,
+            "B1": 0.081364,
+            "B2": 0.067576,
+            "B5": 0.067005,
+            "B9": 0.081512,
+            "B6": 0.081318,
+            "B10": 0.084136,
+            "B3": 0.091522,
+            "B7": 0.069519,
+            "B11": 0.064172
+          },
+          "mass_on_activities": 73.305513
+        },
+        "switch": {
+          "observed_rate": 0.349398,
+          "predicted_rate": 0.408222,
+          "n": 83
+        }
+      }
+    },
+    "bootstrap": {
+      "draws": 30,
+      "held_out_metrics": {
+        "choice_tv": {
+          "mean": 0.107101,
+          "p05": 0.095381,
+          "p95": 0.124154
+        },
+        "choice_ll": {
+          "mean": -2.804187,
+          "p05": -2.827101,
+          "p95": -2.784588
+        },
+        "final_tv": {
+          "mean": 0.124389,
+          "p05": 0.115487,
+          "p95": 0.135703
+        }
+      }
+    },
+    "pooled_share_baseline": {
+      "log_likelihood_per_row": -3.629765,
+      "total_variation": 0.341281,
+      "note": "只使用训练轮次的活动被选比例，不使用家庭所在片区；用于对照而非执行。"
+    }
+  },
+  "proposals": {
+    "W1": {
+      "changes": [
+        {
+          "proposal": "W1",
+          "activity": "B0",
+          "kind": "迁移",
+          "target": "站1/周末",
+          "tier": "supported",
+          "target_cell": {
+            "exposure": 180,
+            "chosen": 47,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 76,
+            "care_chosen": 23
+          },
+          "content_slot_elsewhere": {
+            "exposure": 181,
+            "chosen": 46,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 73,
+            "care_chosen": 19
+          },
+          "site_slot_other_content": {
+            "exposure": 367,
+            "chosen": 91,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 147,
+            "care_chosen": 40
+          },
+          "content_site_other_slot": {
+            "exposure": 0,
+            "chosen": 0,
+            "cycles": [],
+            "n_cycles": 0,
+            "care_exposure": 0,
+            "care_chosen": 0
+          },
+          "site_slot_observed": true,
+          "activity_history": {
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "exposure": 173
+          },
+          "borrow": [
+            "目标格（陪伴/站1/周末）本身有 180 次可选、47 次被选，覆盖 7 个轮次；可借用该格的同内容同地点同时段证据。",
+            "可借用“同内容不同片区、同时段”的证据：陪伴 在 周末 其他片区可选 181 次、被选 46 次。",
+            "可借用“同片区同时段、不同内容”的证据：站1/周末 的其他内容可选 367 次、被选 91 次。"
+          ],
+          "gaps": [],
+          "warnings": [
+            "迁移会撤走 B0 在原片区/原时段的名额，原参与者必须重新选择，不能把新地点的人数直接当作净增量。"
+          ]
+        },
+        {
+          "proposal": "W1",
+          "activity": "B4",
+          "kind": "迁移",
+          "target": "站3/周末",
+          "tier": "supported",
+          "target_cell": {
+            "exposure": 174,
+            "chosen": 55,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 66,
+            "care_chosen": 21
+          },
+          "content_slot_elsewhere": {
+            "exposure": 187,
+            "chosen": 40,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 75,
+            "care_chosen": 18
+          },
+          "site_slot_other_content": {
+            "exposure": 227,
+            "chosen": 58,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 93,
+            "care_chosen": 25
+          },
+          "content_site_other_slot": {
+            "exposure": 0,
+            "chosen": 0,
+            "cycles": [],
+            "n_cycles": 0,
+            "care_exposure": 0,
+            "care_chosen": 0
+          },
+          "site_slot_observed": true,
+          "activity_history": {
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "exposure": 177
+          },
+          "borrow": [
+            "目标格（交流/站3/周末）本身有 174 次可选、55 次被选，覆盖 7 个轮次；可借用该格的同内容同地点同时段证据。",
+            "可借用“同内容不同片区、同时段”的证据：交流 在 周末 其他片区可选 187 次、被选 40 次。",
+            "可借用“同片区同时段、不同内容”的证据：站3/周末 的其他内容可选 227 次、被选 58 次。"
+          ],
+          "gaps": [],
+          "warnings": [
+            "迁移会撤走 B4 在原片区/原时段的名额，原参与者必须重新选择，不能把新地点的人数直接当作净增量。"
+          ]
+        }
+      ],
+      "tier_vector": [
+        "supported",
+        "supported"
+      ],
+      "feasible": true,
+      "decision": "先腾出照看名额",
+      "capacity_decision_reason": "点估计未超限，但照看余量已被吃满（托0/周末 余量 0.00（现行计划已吃满）、托1/周末 余量 0.00（本轮新增压力）、托2/周末 余量 0.00（本轮新增压力）），自助抽样下不超限概率低于一半。周末照看池在现行计划中已接近饱和，迁移类提案会把这些池彻底顶满；应先腾出照看名额、改期，或只做不增加周末照看需求的调整。",
+      "comparison": {
+        "proposal": "W1",
+        "changes": [
+          {
+            "activity": "B0",
+            "kind": "迁移",
+            "target": "站1/周末"
+          },
+          {
+            "activity": "B4",
+            "kind": "迁移",
+            "target": "站3/周末"
+          }
+        ],
+        "current": {
+          "name": "current",
+          "kind": "current",
+          "expected_participants": 76.015947,
+          "expected_declines": 8.424121,
+          "expected_unplaced": 0.0,
+          "continuation": 0.0,
+          "displacement": 0.0,
+          "by_offering": {
+            "B0@站0/晚": 5.0,
+            "B1@站1/周末": 6.0,
+            "B10@站2/晚": 7.0,
+            "B11@站3/周末": 6.26,
+            "B2@站2/晚": 5.933,
+            "B3@站3/周末": 6.963,
+            "B4@站0/晚": 7.202,
+            "B5@站1/周末": 7.391,
+            "B6@站2/晚": 6.611,
+            "B7@站3/周末": 6.84,
+            "B8@站0/晚": 5.0,
+            "B9@站1/周末": 5.816
+          },
+          "care_demand": {
+            "托0/周末": 5.0,
+            "托0/晚": 4.191,
+            "托1/周末": 5.021,
+            "托1/晚": 4.835,
+            "托2/周末": 6.466,
+            "托2/晚": 4.218
+          },
+          "capacity": {
+            "care_limit": {
+              "托0/周末": 6,
+              "托0/晚": 6,
+              "托1/周末": 7,
+              "托1/晚": 7,
+              "托2/周末": 8,
+              "托2/晚": 8
+            },
+            "care_reserved": {
+              "托0/周末": 1,
+              "托0/晚": 1
+            },
+            "care_demand": {
+              "托0/周末": 5.0,
+              "托0/晚": 4.191,
+              "托1/周末": 5.021,
+              "托1/晚": 4.835,
+              "托2/周末": 6.466,
+              "托2/晚": 4.218
+            },
+            "care_headroom": {
+              "托0/周末": 0.0,
+              "托0/晚": 0.809,
+              "托1/周末": 1.979,
+              "托1/晚": 2.165,
+              "托2/周末": 1.534,
+              "托2/晚": 3.782
+            },
+            "care_overflow": {},
+            "seat_capacity": {
+              "B0@站0/晚": 5,
+              "B1@站1/周末": 6,
+              "B10@站2/晚": 7,
+              "B11@站3/周末": 8,
+              "B2@站2/晚": 7,
+              "B3@站3/周末": 8,
+              "B4@站0/晚": 9,
+              "B5@站1/周末": 10,
+              "B6@站2/晚": 11,
+              "B7@站3/周末": 12,
+              "B8@站0/晚": 5,
+              "B9@站1/周末": 6
+            },
+            "seat_demand": {
+              "B0@站0/晚": 5.0,
+              "B1@站1/周末": 6.0,
+              "B10@站2/晚": 7.0,
+              "B11@站3/周末": 6.26,
+              "B2@站2/晚": 5.933,
+              "B3@站3/周末": 6.963,
+              "B4@站0/晚": 7.202,
+              "B5@站1/周末": 7.391,
+              "B6@站2/晚": 6.611,
+              "B7@站3/周末": 6.84,
+              "B8@站0/晚": 5.0,
+              "B9@站1/周末": 5.816
+            },
+            "seat_headroom": {
+              "B0@站0/晚": 0.0,
+              "B1@站1/周末": 0.0,
+              "B10@站2/晚": 0.0,
+              "B11@站3/周末": 1.74,
+              "B2@站2/晚": 1.067,
+              "B3@站3/周末": 1.037,
+              "B4@站0/晚": 1.798,
+              "B5@站1/周末": 2.609,
+              "B6@站2/晚": 4.389,
+              "B7@站3/周末": 5.16,
+              "B8@站0/晚": 0.0,
+              "B9@站1/周末": 0.184
+            },
+            "seat_overflow": {},
+            "displaced_families": [
+              "F72",
+              "F76",
+              "F77",
+              "F79",
+              "F8",
+              "F80",
+              "F81",
+              "F82",
+              "F83",
+              "F9"
+            ]
+          }
+        },
+        "proposed": {
+          "name": "W1",
+          "kind": "rotation",
+          "expected_participants": 73.67219,
+          "expected_declines": 8.516349,
+          "expected_unplaced": 1.81146,
+          "continuation": 59.069162,
+          "displacement": 16.946785,
+          "by_offering": {
+            "B0@站1/周末": 5.0,
+            "B1@站1/周末": 6.0,
+            "B10@站2/晚": 7.0,
+            "B11@站3/周末": 6.259,
+            "B2@站2/晚": 5.93,
+            "B3@站3/周末": 4.855,
+            "B4@站3/周末": 9.0,
+            "B5@站1/周末": 7.913,
+            "B6@站2/晚": 6.692,
+            "B7@站3/周末": 5.327,
+            "B8@站0/晚": 5.0,
+            "B9@站1/周末": 4.696
+          },
+          "care_demand": {
+            "托0/周末": 5.0,
+            "托0/晚": 2.223,
+            "托1/周末": 7.0,
+            "托1/晚": 2.22,
+            "托2/周末": 8.0,
+            "托2/晚": 4.481
+          },
+          "capacity": {
+            "care_limit": {
+              "托0/周末": 6,
+              "托0/晚": 6,
+              "托1/周末": 7,
+              "托1/晚": 7,
+              "托2/周末": 8,
+              "托2/晚": 8
+            },
+            "care_reserved": {
+              "托0/周末": 1
+            },
+            "care_demand": {
+              "托0/周末": 5.0,
+              "托0/晚": 2.223,
+              "托1/周末": 7.0,
+              "托1/晚": 2.22,
+              "托2/周末": 8.0,
+              "托2/晚": 4.481
+            },
+            "care_headroom": {
+              "托0/周末": 0.0,
+              "托0/晚": 3.777,
+              "托1/周末": 0.0,
+              "托1/晚": 4.78,
+              "托2/周末": 0.0,
+              "托2/晚": 3.519
+            },
+            "care_overflow": {},
+            "seat_capacity": {
+              "B0@站1/周末": 5,
+              "B1@站1/周末": 6,
+              "B10@站2/晚": 7,
+              "B11@站3/周末": 8,
+              "B2@站2/晚": 7,
+              "B3@站3/周末": 8,
+              "B4@站3/周末": 9,
+              "B5@站1/周末": 10,
+              "B6@站2/晚": 11,
+              "B7@站3/周末": 12,
+              "B8@站0/晚": 5,
+              "B9@站1/周末": 6
+            },
+            "seat_demand": {
+              "B0@站1/周末": 5.0,
+              "B1@站1/周末": 6.0,
+              "B10@站2/晚": 7.0,
+              "B11@站3/周末": 6.259,
+              "B2@站2/晚": 5.93,
+              "B3@站3/周末": 4.855,
+              "B4@站3/周末": 9.0,
+              "B5@站1/周末": 7.913,
+              "B6@站2/晚": 6.692,
+              "B7@站3/周末": 5.327,
+              "B8@站0/晚": 5.0,
+              "B9@站1/周末": 4.696
+            },
+            "seat_headroom": {
+              "B0@站1/周末": 0.0,
+              "B1@站1/周末": 0.0,
+              "B10@站2/晚": 0.0,
+              "B11@站3/周末": 1.741,
+              "B2@站2/晚": 1.07,
+              "B3@站3/周末": 3.145,
+              "B4@站3/周末": 0.0,
+              "B5@站1/周末": 2.087,
+              "B6@站2/晚": 4.308,
+              "B7@站3/周末": 6.673,
+              "B8@站0/晚": 0.0,
+              "B9@站1/周末": 1.304
+            },
+            "seat_overflow": {},
+            "displaced_families": [
+              "F52",
+              "F53",
+              "F56",
+              "F57",
+              "F59",
+              "F60",
+              "F61",
+              "F64",
+              "F65",
+              "F68",
+              "F69",
+              "F71",
+              "F72",
+              "F73",
+              "F75",
+              "F76",
+              "F77",
+              "F79",
+              "F8",
+              "F80",
+              "F81",
+              "F82",
+              "F83",
+              "F9"
+            ]
+          }
+        },
+        "net": {
+          "expected_participants": -2.343757,
+          "expected_declines_delta": 0.092228,
+          "expected_unplaced": 1.81146,
+          "expected_unplaced_delta": 1.81146,
+          "continuation": 59.069162,
+          "displacement": 16.946785
+        },
+        "binding_constraints": [
+          {
+            "pool": "托0",
+            "slot": "周末",
+            "limit": 6,
+            "reserved": 1,
+            "demand_before": 5.0,
+            "demand_after": 5.0,
+            "headroom_before": 0.0,
+            "headroom_after": 0.0,
+            "raised_by_proposal": false
+          },
+          {
+            "pool": "托1",
+            "slot": "周末",
+            "limit": 7,
+            "reserved": 0,
+            "demand_before": 5.021,
+            "demand_after": 7.0,
+            "headroom_before": 1.979,
+            "headroom_after": 0.0,
+            "raised_by_proposal": true
+          },
+          {
+            "pool": "托2",
+            "slot": "周末",
+            "limit": 8,
+            "reserved": 0,
+            "demand_before": 6.466,
+            "demand_after": 8.0,
+            "headroom_before": 1.534,
+            "headroom_after": 0.0,
+            "raised_by_proposal": true
+          },
+          {
+            "pool": "托2",
+            "slot": "晚",
+            "limit": 8,
+            "reserved": 0,
+            "demand_before": 4.218,
+            "demand_after": 4.481,
+            "headroom_before": 3.782,
+            "headroom_after": 3.519,
+            "raised_by_proposal": true
+          }
+        ],
+        "rechecked_displaced": [
+          {
+            "family": "F72",
+            "expected_before": 0.992,
+            "expected_after": 0.832,
+            "delta": -0.16,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.337
+            }
+          },
+          {
+            "family": "F76",
+            "expected_before": 0.895,
+            "expected_after": 0,
+            "delta": -0.895,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.265
+            }
+          },
+          {
+            "family": "F77",
+            "expected_before": 0.986,
+            "expected_after": 0.924,
+            "delta": -0.062,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.231
+            }
+          },
+          {
+            "family": "F79",
+            "expected_before": 0.96,
+            "expected_after": 0.93,
+            "delta": -0.029,
+            "top_alternative": {
+              "activity": "B11",
+              "site": "站3",
+              "slot": "周末",
+              "probability": 0.192
+            }
+          },
+          {
+            "family": "F8",
+            "expected_before": 1.041,
+            "expected_after": 0.611,
+            "delta": -0.43,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.254
+            }
+          },
+          {
+            "family": "F80",
+            "expected_before": 0.951,
+            "expected_after": 0.721,
+            "delta": -0.23,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.193
+            }
+          },
+          {
+            "family": "F81",
+            "expected_before": 0.901,
+            "expected_after": 0.924,
+            "delta": 0.023,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.231
+            }
+          },
+          {
+            "family": "F82",
+            "expected_before": 0.915,
+            "expected_after": 0.917,
+            "delta": 0.002,
+            "top_alternative": {
+              "activity": "B2",
+              "site": "站2",
+              "slot": "晚",
+              "probability": 0.154
+            }
+          },
+          {
+            "family": "F83",
+            "expected_before": 0.912,
+            "expected_after": 0.93,
+            "delta": 0.019,
+            "top_alternative": {
+              "activity": "B11",
+              "site": "站3",
+              "slot": "周末",
+              "probability": 0.19
+            }
+          },
+          {
+            "family": "F9",
+            "expected_before": 0.91,
+            "expected_after": 0.663,
+            "delta": -0.247,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.192
+            }
+          }
+        ],
+        "feasible_without_overflow": true
+      },
+      "uncertainty": {
+        "draws": 60,
+        "participants_current": {
+          "mean": 76.036094,
+          "p05": 74.698608,
+          "p50": 75.990387,
+          "p95": 77.286839
+        },
+        "participants_proposed": {
+          "mean": 73.651188,
+          "p05": 72.886111,
+          "p50": 73.686141,
+          "p95": 74.184243
+        },
+        "participants_delta": {
+          "mean": -2.384905,
+          "p05": -3.086992,
+          "p50": -2.380523,
+          "p95": -1.6079
+        },
+        "care_overflow_proposed_max": {
+          "mean": 0.082084,
+          "p05": 0.0,
+          "p50": 0.085158,
+          "p95": 0.163741
+        },
+        "seats_overflow_proposed_max": {
+          "mean": 0.0,
+          "p05": 0.0,
+          "p50": 0.0,
+          "p95": 0.0
+        },
+        "probability_delta_positive": 0.0,
+        "probability_within_capacity": 0.083333,
+        "note": "区间来自按家庭聚类的自助抽样；家庭而非行是抽样单位，同一家庭不会因跨轮次重复而人为放大置信度。"
+      },
+      "changed_families": [
+        {
+          "family": "F76",
+          "area": "站0",
+          "needs_care": true,
+          "expected_before": 0.89548,
+          "expected_after": 0,
+          "delta": -0.89548
+        },
+        {
+          "family": "F68",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 0.879608,
+          "expected_after": 0,
+          "delta": -0.879608
+        },
+        {
+          "family": "F8",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 1.040855,
+          "expected_after": 0.611219,
+          "delta": -0.429636
+        },
+        {
+          "family": "F9",
+          "area": "站1",
+          "needs_care": true,
+          "expected_before": 0.909722,
+          "expected_after": 0.662803,
+          "delta": -0.24692
+        },
+        {
+          "family": "F80",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 0.951389,
+          "expected_after": 0.721322,
+          "delta": -0.230067
+        },
+        {
+          "family": "F72",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 0.992492,
+          "expected_after": 0.832168,
+          "delta": -0.160324
+        },
+        {
+          "family": "F28",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 0.895479,
+          "expected_after": 0.832167,
+          "delta": -0.063312
+        },
+        {
+          "family": "F36",
+          "area": "站0",
+          "needs_care": true,
+          "expected_before": 0.895481,
+          "expected_after": 0.832172,
+          "delta": -0.063309
+        },
+        {
+          "family": "F77",
+          "area": "站1",
+          "needs_care": false,
+          "expected_before": 0.985892,
+          "expected_after": 0.923678,
+          "delta": -0.062214
+        }
+      ],
+      "trial": {
+        "proposal": "W1",
+        "rows": [
+          {
+            "activity": "B0",
+            "target": "站1/周末",
+            "decision": "纳入正式轮换评估",
+            "trial_care_seats": null,
+            "reason": "目标格有直接或可拼合的可选记录，可进入正式评估。"
+          },
+          {
+            "activity": "B4",
+            "target": "站3/周末",
+            "decision": "纳入正式轮换评估",
+            "trial_care_seats": null,
+            "reason": "目标格有直接或可拼合的可选记录，可进入正式评估。"
+          }
+        ],
+        "rule": "试开只能用未承诺的余量，不能占用 confirmed 回执或当前计划已确认的照看名额；试开结果在下一轮才作为观测进入模型，不得写入本轮正式轮换理由。"
+      }
+    },
+    "W2": {
+      "changes": [
+        {
+          "proposal": "W2",
+          "activity": "B11",
+          "kind": "增设",
+          "target": "站0/晚",
+          "tier": "supported",
+          "target_cell": {
+            "exposure": 177,
+            "chosen": 43,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 77,
+            "care_chosen": 20
+          },
+          "content_slot_elsewhere": {
+            "exposure": 178,
+            "chosen": 40,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 68,
+            "care_chosen": 16
+          },
+          "site_slot_other_content": {
+            "exposure": 350,
+            "chosen": 79,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 133,
+            "care_chosen": 30
+          },
+          "content_site_other_slot": {
+            "exposure": 0,
+            "chosen": 0,
+            "cycles": [],
+            "n_cycles": 0,
+            "care_exposure": 0,
+            "care_chosen": 0
+          },
+          "site_slot_observed": true,
+          "activity_history": {
+            "cycles": [
+              6,
+              7
+            ],
+            "exposure": 46
+          },
+          "borrow": [
+            "目标格（协作/站0/晚）本身有 177 次可选、43 次被选，覆盖 7 个轮次；可借用该格的同内容同地点同时段证据。",
+            "可借用“同内容不同片区、同时段”的证据：协作 在 晚 其他片区可选 178 次、被选 40 次。",
+            "可借用“同片区同时段、不同内容”的证据：站0/晚 的其他内容可选 350 次、被选 79 次。"
+          ],
+          "gaps": [],
+          "warnings": [
+            "活动 B11 自身只在 2 个轮次出现（可选 46 次），其自身历史偏薄；结论主要靠同内容同格的其他活动支撑。",
+            "增设在保留原名额的同时新增一处 B11，需与同内容原供应一起看是否重复计算同一批家庭。"
+          ]
+        },
+        {
+          "proposal": "W2",
+          "activity": "B3",
+          "kind": "增设",
+          "target": "站1/周末",
+          "tier": "supported",
+          "target_cell": {
+            "exposure": 180,
+            "chosen": 47,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 76,
+            "care_chosen": 23
+          },
+          "content_slot_elsewhere": {
+            "exposure": 181,
+            "chosen": 46,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 73,
+            "care_chosen": 19
+          },
+          "site_slot_other_content": {
+            "exposure": 367,
+            "chosen": 91,
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_cycles": 7,
+            "care_exposure": 147,
+            "care_chosen": 40
+          },
+          "content_site_other_slot": {
+            "exposure": 0,
+            "chosen": 0,
+            "cycles": [],
+            "n_cycles": 0,
+            "care_exposure": 0,
+            "care_chosen": 0
+          },
+          "site_slot_observed": true,
+          "activity_history": {
+            "cycles": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "exposure": 181
+          },
+          "borrow": [
+            "目标格（陪伴/站1/周末）本身有 180 次可选、47 次被选，覆盖 7 个轮次；可借用该格的同内容同地点同时段证据。",
+            "可借用“同内容不同片区、同时段”的证据：陪伴 在 周末 其他片区可选 181 次、被选 46 次。",
+            "可借用“同片区同时段、不同内容”的证据：站1/周末 的其他内容可选 367 次、被选 91 次。"
+          ],
+          "gaps": [],
+          "warnings": [
+            "增设在保留原名额的同时新增一处 B3，需与同内容原供应一起看是否重复计算同一批家庭。"
+          ]
+        }
+      ],
+      "tier_vector": [
+        "supported",
+        "supported"
+      ],
+      "feasible": false,
+      "decision": "改期或拆分",
+      "capacity_decision_reason": "照看名额期望值超限：托0/周末 超 0.08；需先腾出名额、改期或拆分。",
+      "comparison": {
+        "proposal": "W2",
+        "changes": [
+          {
+            "activity": "B11",
+            "kind": "增设",
+            "target": "站0/晚"
+          },
+          {
+            "activity": "B3",
+            "kind": "增设",
+            "target": "站1/周末"
+          }
+        ],
+        "current": {
+          "name": "current",
+          "kind": "current",
+          "expected_participants": 76.015947,
+          "expected_declines": 8.424121,
+          "expected_unplaced": 0.0,
+          "continuation": 0.0,
+          "displacement": 0.0,
+          "by_offering": {
+            "B0@站0/晚": 5.0,
+            "B1@站1/周末": 6.0,
+            "B10@站2/晚": 7.0,
+            "B11@站3/周末": 6.26,
+            "B2@站2/晚": 5.933,
+            "B3@站3/周末": 6.963,
+            "B4@站0/晚": 7.202,
+            "B5@站1/周末": 7.391,
+            "B6@站2/晚": 6.611,
+            "B7@站3/周末": 6.84,
+            "B8@站0/晚": 5.0,
+            "B9@站1/周末": 5.816
+          },
+          "care_demand": {
+            "托0/周末": 5.0,
+            "托0/晚": 4.191,
+            "托1/周末": 5.021,
+            "托1/晚": 4.835,
+            "托2/周末": 6.466,
+            "托2/晚": 4.218
+          },
+          "capacity": {
+            "care_limit": {
+              "托0/周末": 6,
+              "托0/晚": 6,
+              "托1/周末": 7,
+              "托1/晚": 7,
+              "托2/周末": 8,
+              "托2/晚": 8
+            },
+            "care_reserved": {
+              "托0/周末": 1,
+              "托0/晚": 1
+            },
+            "care_demand": {
+              "托0/周末": 5.0,
+              "托0/晚": 4.191,
+              "托1/周末": 5.021,
+              "托1/晚": 4.835,
+              "托2/周末": 6.466,
+              "托2/晚": 4.218
+            },
+            "care_headroom": {
+              "托0/周末": 0.0,
+              "托0/晚": 0.809,
+              "托1/周末": 1.979,
+              "托1/晚": 2.165,
+              "托2/周末": 1.534,
+              "托2/晚": 3.782
+            },
+            "care_overflow": {},
+            "seat_capacity": {
+              "B0@站0/晚": 5,
+              "B1@站1/周末": 6,
+              "B10@站2/晚": 7,
+              "B11@站3/周末": 8,
+              "B2@站2/晚": 7,
+              "B3@站3/周末": 8,
+              "B4@站0/晚": 9,
+              "B5@站1/周末": 10,
+              "B6@站2/晚": 11,
+              "B7@站3/周末": 12,
+              "B8@站0/晚": 5,
+              "B9@站1/周末": 6
+            },
+            "seat_demand": {
+              "B0@站0/晚": 5.0,
+              "B1@站1/周末": 6.0,
+              "B10@站2/晚": 7.0,
+              "B11@站3/周末": 6.26,
+              "B2@站2/晚": 5.933,
+              "B3@站3/周末": 6.963,
+              "B4@站0/晚": 7.202,
+              "B5@站1/周末": 7.391,
+              "B6@站2/晚": 6.611,
+              "B7@站3/周末": 6.84,
+              "B8@站0/晚": 5.0,
+              "B9@站1/周末": 5.816
+            },
+            "seat_headroom": {
+              "B0@站0/晚": 0.0,
+              "B1@站1/周末": 0.0,
+              "B10@站2/晚": 0.0,
+              "B11@站3/周末": 1.74,
+              "B2@站2/晚": 1.067,
+              "B3@站3/周末": 1.037,
+              "B4@站0/晚": 1.798,
+              "B5@站1/周末": 2.609,
+              "B6@站2/晚": 4.389,
+              "B7@站3/周末": 5.16,
+              "B8@站0/晚": 0.0,
+              "B9@站1/周末": 0.184
+            },
+            "seat_overflow": {},
+            "displaced_families": [
+              "F72",
+              "F76",
+              "F77",
+              "F79",
+              "F8",
+              "F80",
+              "F81",
+              "F82",
+              "F83",
+              "F9"
+            ]
+          }
+        },
+        "proposed": {
+          "name": "W2",
+          "kind": "rotation",
+          "expected_participants": 76.794221,
+          "expected_declines": 7.209963,
+          "expected_unplaced": 0.0,
+          "continuation": 63.179638,
+          "displacement": 12.836309,
+          "by_offering": {
+            "B0@站0/晚": 4.051,
+            "B1@站1/周末": 6.0,
+            "B10@站2/晚": 6.67,
+            "B11@站0/晚": 6.869,
+            "B11@站3/周末": 4.776,
+            "B2@站2/晚": 5.762,
+            "B3@站1/周末": 6.746,
+            "B3@站3/周末": 4.474,
+            "B4@站0/晚": 4.884,
+            "B5@站1/周末": 5.801,
+            "B6@站2/晚": 6.402,
+            "B7@站3/周末": 5.471,
+            "B8@站0/晚": 4.604,
+            "B9@站1/周末": 4.285
+          },
+          "care_demand": {
+            "托0/周末": 5.077,
+            "托0/晚": 3.681,
+            "托1/周末": 5.064,
+            "托1/晚": 4.245,
+            "托2/周末": 5.197,
+            "托2/晚": 6.924
+          },
+          "capacity": {
+            "care_limit": {
+              "托0/周末": 6,
+              "托0/晚": 6,
+              "托1/周末": 7,
+              "托1/晚": 7,
+              "托2/周末": 8,
+              "托2/晚": 8
+            },
+            "care_reserved": {
+              "托0/周末": 1,
+              "托0/晚": 1
+            },
+            "care_demand": {
+              "托0/周末": 5.077,
+              "托0/晚": 3.681,
+              "托1/周末": 5.064,
+              "托1/晚": 4.245,
+              "托2/周末": 5.197,
+              "托2/晚": 6.924
+            },
+            "care_headroom": {
+              "托0/周末": -0.077,
+              "托0/晚": 1.319,
+              "托1/周末": 1.936,
+              "托1/晚": 2.755,
+              "托2/周末": 2.803,
+              "托2/晚": 1.076
+            },
+            "care_overflow": {
+              "托0/周末": 0.077
+            },
+            "seat_capacity": {
+              "B0@站0/晚": 5,
+              "B1@站1/周末": 6,
+              "B10@站2/晚": 7,
+              "B11@站0/晚": 8,
+              "B11@站3/周末": 8,
+              "B2@站2/晚": 7,
+              "B3@站1/周末": 8,
+              "B3@站3/周末": 8,
+              "B4@站0/晚": 9,
+              "B5@站1/周末": 10,
+              "B6@站2/晚": 11,
+              "B7@站3/周末": 12,
+              "B8@站0/晚": 5,
+              "B9@站1/周末": 6
+            },
+            "seat_demand": {
+              "B0@站0/晚": 4.051,
+              "B1@站1/周末": 6.0,
+              "B10@站2/晚": 6.67,
+              "B11@站0/晚": 6.869,
+              "B11@站3/周末": 4.776,
+              "B2@站2/晚": 5.762,
+              "B3@站1/周末": 6.746,
+              "B3@站3/周末": 4.474,
+              "B4@站0/晚": 4.884,
+              "B5@站1/周末": 5.801,
+              "B6@站2/晚": 6.402,
+              "B7@站3/周末": 5.471,
+              "B8@站0/晚": 4.604,
+              "B9@站1/周末": 4.285
+            },
+            "seat_headroom": {
+              "B0@站0/晚": 0.949,
+              "B1@站1/周末": 0.0,
+              "B10@站2/晚": 0.33,
+              "B11@站0/晚": 1.131,
+              "B11@站3/周末": 3.224,
+              "B2@站2/晚": 1.238,
+              "B3@站1/周末": 1.254,
+              "B3@站3/周末": 3.526,
+              "B4@站0/晚": 4.116,
+              "B5@站1/周末": 4.199,
+              "B6@站2/晚": 4.598,
+              "B7@站3/周末": 6.529,
+              "B8@站0/晚": 0.396,
+              "B9@站1/周末": 1.715
+            },
+            "seat_overflow": {},
+            "displaced_families": [
+              "F61",
+              "F69",
+              "F71",
+              "F76",
+              "F79",
+              "F81",
+              "F9"
+            ]
+          }
+        },
+        "net": {
+          "expected_participants": 0.778274,
+          "expected_declines_delta": -1.214159,
+          "expected_unplaced": 0.0,
+          "expected_unplaced_delta": 0.0,
+          "continuation": 63.179638,
+          "displacement": 12.836309
+        },
+        "binding_constraints": [
+          {
+            "pool": "托0",
+            "slot": "周末",
+            "limit": 6,
+            "reserved": 1,
+            "demand_before": 5.0,
+            "demand_after": 5.077,
+            "headroom_before": 0.0,
+            "headroom_after": -0.077,
+            "raised_by_proposal": true
+          },
+          {
+            "pool": "托1",
+            "slot": "周末",
+            "limit": 7,
+            "reserved": 0,
+            "demand_before": 5.021,
+            "demand_after": 5.064,
+            "headroom_before": 1.979,
+            "headroom_after": 1.936,
+            "raised_by_proposal": true
+          },
+          {
+            "pool": "托2",
+            "slot": "晚",
+            "limit": 8,
+            "reserved": 0,
+            "demand_before": 4.218,
+            "demand_after": 6.924,
+            "headroom_before": 3.782,
+            "headroom_after": 1.076,
+            "raised_by_proposal": true
+          }
+        ],
+        "rechecked_displaced": [
+          {
+            "family": "F72",
+            "expected_before": 0.992,
+            "expected_after": 0.907,
+            "delta": -0.086,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.227
+            }
+          },
+          {
+            "family": "F76",
+            "expected_before": 0.895,
+            "expected_after": 0.925,
+            "delta": 0.029,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.157
+            }
+          },
+          {
+            "family": "F77",
+            "expected_before": 0.986,
+            "expected_after": 0.924,
+            "delta": -0.062,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.231
+            }
+          },
+          {
+            "family": "F79",
+            "expected_before": 0.96,
+            "expected_after": 0.926,
+            "delta": -0.033,
+            "top_alternative": {
+              "activity": "B11",
+              "site": "站3",
+              "slot": "周末",
+              "probability": 0.161
+            }
+          },
+          {
+            "family": "F8",
+            "expected_before": 1.041,
+            "expected_after": 0.915,
+            "delta": -0.126,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.186
+            }
+          },
+          {
+            "family": "F80",
+            "expected_before": 0.951,
+            "expected_after": 0.923,
+            "delta": -0.028,
+            "top_alternative": {
+              "activity": "B8",
+              "site": "站0",
+              "slot": "晚",
+              "probability": 0.155
+            }
+          },
+          {
+            "family": "F81",
+            "expected_before": 0.901,
+            "expected_after": 0.924,
+            "delta": 0.023,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.231
+            }
+          },
+          {
+            "family": "F82",
+            "expected_before": 0.915,
+            "expected_after": 0.915,
+            "delta": 0.0,
+            "top_alternative": {
+              "activity": "B2",
+              "site": "站2",
+              "slot": "晚",
+              "probability": 0.154
+            }
+          },
+          {
+            "family": "F83",
+            "expected_before": 0.912,
+            "expected_after": 0.926,
+            "delta": 0.015,
+            "top_alternative": {
+              "activity": "B11",
+              "site": "站3",
+              "slot": "周末",
+              "probability": 0.156
+            }
+          },
+          {
+            "family": "F9",
+            "expected_before": 0.91,
+            "expected_after": 0.933,
+            "delta": 0.024,
+            "top_alternative": {
+              "activity": "B5",
+              "site": "站1",
+              "slot": "周末",
+              "probability": 0.193
+            }
+          }
+        ],
+        "feasible_without_overflow": false
+      },
+      "uncertainty": {
+        "draws": 60,
+        "participants_current": {
+          "mean": 76.036094,
+          "p05": 74.698608,
+          "p50": 75.990387,
+          "p95": 77.286839
+        },
+        "participants_proposed": {
+          "mean": 76.784873,
+          "p05": 75.857666,
+          "p50": 76.760977,
+          "p95": 77.686936
+        },
+        "participants_delta": {
+          "mean": 0.748779,
+          "p05": 0.366778,
+          "p50": 0.713071,
+          "p95": 1.162378
+        },
+        "care_overflow_proposed_max": {
+          "mean": 0.083557,
+          "p05": 0.020668,
+          "p50": 0.076398,
+          "p95": 0.156774
+        },
+        "seats_overflow_proposed_max": {
+          "mean": 0.0,
+          "p05": 0.0,
+          "p50": 0.0,
+          "p95": 0.0
+        },
+        "probability_delta_positive": 1.0,
+        "probability_within_capacity": 0.0,
+        "note": "区间来自按家庭聚类的自助抽样；家庭而非行是抽样单位，同一家庭不会因跨轮次重复而人为放大置信度。"
+      },
+      "changed_families": [
+        {
+          "family": "F8",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 1.040855,
+          "expected_after": 0.914835,
+          "delta": -0.12602
+        },
+        {
+          "family": "F72",
+          "area": "站0",
+          "needs_care": false,
+          "expected_before": 0.992492,
+          "expected_after": 0.906904,
+          "delta": -0.085588
+        },
+        {
+          "family": "F77",
+          "area": "站1",
+          "needs_care": false,
+          "expected_before": 0.985892,
+          "expected_after": 0.923678,
+          "delta": -0.062214
+        }
+      ],
+      "trial": {
+        "proposal": "W2",
+        "rows": [
+          {
+            "activity": "B11",
+            "target": "站0/晚",
+            "decision": "纳入正式轮换评估",
+            "trial_care_seats": null,
+            "reason": "目标格有直接或可拼合的可选记录，可进入正式评估。"
+          },
+          {
+            "activity": "B3",
+            "target": "站1/周末",
+            "decision": "纳入正式轮换评估",
+            "trial_care_seats": null,
+            "reason": "目标格有直接或可拼合的可选记录，可进入正式评估。"
+          }
+        ],
+        "rule": "试开只能用未承诺的余量，不能占用 confirmed 回执或当前计划已确认的照看名额；试开结果在下一轮才作为观测进入模型，不得写入本轮正式轮换理由。"
+      }
+    }
+  },
+  "trial_policy": "试开只能用未承诺的余量，不能占用 confirmed 回执或当前计划已确认的照看名额；试开结果在下一轮才作为观测进入模型，不得写入本轮正式轮换理由。",
+  "proposals_summary": {
+    "W1": {
+      "tier_vector": [
+        "supported",
+        "supported"
+      ],
+      "feasible": true,
+      "decision": "先腾出照看名额",
+      "capacity_decision_reason": "点估计未超限，但照看余量已被吃满（托0/周末 余量 0.00（现行计划已吃满）、托1/周末 余量 0.00（本轮新增压力）、托2/周末 余量 0.00（本轮新增压力）），自助抽样下不超限概率低于一半。周末照看池在现行计划中已接近饱和，迁移类提案会把这些池彻底顶满；应先腾出照看名额、改期，或只做不增加周末照看需求的调整。",
+      "net_participants": -2.343757
+    },
+    "W2": {
+      "tier_vector": [
+        "supported",
+        "supported"
+      ],
+      "feasible": false,
+      "decision": "改期或拆分",
+      "capacity_decision_reason": "照看名额期望值超限：托0/周末 超 0.08；需先腾出名额、改期或拆分。",
+      "net_participants": 0.778274
+    }
+  }
+}
